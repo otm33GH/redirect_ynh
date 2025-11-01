@@ -61,13 +61,13 @@ ram.runtime = "50M"
     help.fr = "Installez le connecteur OnlyOffice pour éditer des documents dans Nextcloud."
     type = "string"
     example = "https://cloud.yunohost.domain/nextcloud https://example.com"
-
+    default = ""
+    
     [install.upload_max_size]
-    ask.en = "List of web addresses authorized to integrate the OnlyOffice editor separated by space"
-    ask.fr = "Liste des adresses web autorisées à intégrer l'éditeur OnlyOffice séparées par un espace"
-    help.en = "Install the OnlyOffice connector to edit documents from Nextcloud."
-    help.fr = "Installez le connecteur OnlyOffice pour éditer des documents dans Nextcloud."
+    ask.en = "upload size"
+    ask.fr = "upload size"
     type = "number"
+    default = "1"
     example = "https://cloud.yunohost.domain/nextcloud https://example.com"
     
 
