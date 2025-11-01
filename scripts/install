@@ -9,8 +9,8 @@ _validate_redirect_uri
 # CONFIGURE NGINX
 #=================================================
 ynh_script_progression "Configuring NGINX web server..."
-ynh_app_setting_set --key=upload_max_size --value=0
-ynh_app_setting_set --key=allowed_urls --value=""
+ynh_app_setting_set_default --key=upload_max_size --value=0
+ynh_app_setting_set_default --key=allowed_urls --value=""
 mv ../conf/{"nginx-$redirect_type.conf",nginx.conf}
 ynh_config_add_nginx
 
