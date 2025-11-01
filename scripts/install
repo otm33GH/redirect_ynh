@@ -12,6 +12,8 @@ ynh_script_progression "Configuring NGINX web server..."
 
 mv ../conf/{"nginx-$redirect_type.conf",nginx.conf}
 ynh_config_add_nginx
+ynh_app_setting_set --key=upload_max_size --value=0
+ynh_app_setting_set --key=allowed_urls --value=""
 
 #=================================================
 # END OF SCRIPT
