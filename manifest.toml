@@ -54,26 +54,6 @@ ram.runtime = "50M"
     default = "visitors"
 
     
-    [install.allowed_urls]
-    ask.en = "List of web addresses authorized to integrate the OnlyOffice editor separated by space"
-    ask.fr = "Liste des adresses web autorisées à intégrer l'éditeur OnlyOffice séparées par un espace"
-    help.en = "Install the OnlyOffice connector to edit documents from Nextcloud."
-    help.fr = "Installez le connecteur OnlyOffice pour éditer des documents dans Nextcloud."
-    type = "string"
-    example = "https://cloud.yunohost.domain/nextcloud https://example.com"
-    default = ""
-    optional = true
-    
-    
-    [install.upload_max_size]
-    ask.en = "upload size"
-    ask.fr = "upload size"
-    type = "number"
-    default = "1"
-    optional = true
-    min = 0
-    max = 1000
-
 [resources]
     # Meh we gotta keep this otherwise migrations from the v1 era will fail
     # because they assume a system user resource existed in v1 and will want to
