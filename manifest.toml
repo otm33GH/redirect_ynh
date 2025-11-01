@@ -62,14 +62,15 @@ ram.runtime = "50M"
     type = "string"
     example = "https://cloud.yunohost.domain/nextcloud https://example.com"
     default = ""
+    optional = true
+    
     
     [install.upload_max_size]
     ask.en = "upload size"
     ask.fr = "upload size"
     type = "number"
     default = "1"
-    example = "https://cloud.yunohost.domain/nextcloud https://example.com"
-    
+    optional = true
 
 [resources]
     # Meh we gotta keep this otherwise migrations from the v1 era will fail
