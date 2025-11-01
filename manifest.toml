@@ -72,6 +72,7 @@ ram.runtime = "50M"
     default = "1"
     optional = true
     min = 0
+    max = 1000
 
 [resources]
     # Meh we gotta keep this otherwise migrations from the v1 era will fail
