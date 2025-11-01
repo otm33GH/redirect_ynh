@@ -4,10 +4,12 @@ source _common.sh
 source /usr/share/yunohost/helpers
 
 
-init_settings
+
 
 ynh_app_setting_set_default --key=upload_max_size --value=1
 ynh_app_setting_set_default --key=allowed_urls --value=""
+
+
 _validate_redirect_uri
 
 #=================================================
