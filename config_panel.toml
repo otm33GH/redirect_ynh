@@ -5,15 +5,16 @@ name.en = "Configuration panel"
 name.fr = "Panneau de configuration"
 services = ["nginx"]
 
+
 [main.limit_size]
 name.en = "Upload limit size"
 name.fr = "Téléchargement de fichiers"
-
 
 [main.limit_size.upload_max_size]
 ask.fr = "Taille limite Nginx pour le téléchargement des fichiers en Mo"
 ask.en = "Nginx limit size file upload (Mb)"
 type = "number"
+bind = "null"
 
 [main.integration]
 
@@ -21,3 +22,4 @@ type = "number"
 ask.en = "List of web addresses authorized to integrate this app separated by space"
 ask.fr = "Liste des adresses web autorisées à intégrer cette application séparées par un espace"
 type = "string"
+bind = "null"
