@@ -17,7 +17,8 @@ type = "number"
 bind = "null"
 
 [main.integration]
-
+name.en = "Allow embedding"
+name.fr = "Autorisation d'intégration"
 [main.integration.allowed_urls]
 ask.en = "List of web addresses authorized to integrate this app separated by space"
 ask.fr = "Liste des adresses web autorisées à intégrer cette application séparées par un espace"
