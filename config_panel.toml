@@ -7,12 +7,12 @@ services = ["nginx"]
 
 
 [main.limit_size]
-name.en = "Upload limit size"
-name.fr = "Téléchargement de fichiers"
+name.en = "Upload size limit"
+name.fr = "Taille limite pour le téléchargement"
 
 [main.limit_size.upload_max_size]
-ask.fr = "Taille limite Nginx pour le téléchargement des fichiers en Mo"
-ask.en = "Nginx limit size file upload (Mb)"
+ask.fr = "Taille limite pour le téléchargement des fichiers en Mo"
+ask.en = "File Upload Size Limit (Mb)"
 type = "number"
 bind = "null"
 
