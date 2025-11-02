@@ -17,10 +17,10 @@ type = "number"
 bind = "null"
 
 [main.integration]
-name.en = "Allow embedding"
-name.fr = "Autorisation d'intégration"
+name.en = "Embedding"
+name.fr = "Intégration"
 [main.integration.allowed_urls]
-ask.en = "List of web addresses authorized to integrate this app separated by space"
+ask.en = "Allow embedding from (URLs separated by spaces)"
 ask.fr = "Liste des adresses web autorisées à intégrer cette application séparées par un espace"
 type = "string"
 bind = "null"
