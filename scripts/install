@@ -3,11 +3,20 @@
 source _common.sh
 source /usr/share/yunohost/helpers
 
+#=================================================
+# RETRIEVE ARGUMENTS FROM THE MANIFEST
+#=================================================
 
+upload_max_size="1"
+allowed_urls=""
 
+#=================================================
+# STORE SETTINGS FROM MANIFEST
+#=================================================
 
-ynh_app_setting_set_default --key=upload_max_size --value="1"
-ynh_app_setting_set_default --key=allowed_urls --value=""
+ynh_app_setting_set --key=upload_max_size --value=$upload_max_size
+ynh_app_setting_set --key=allowed_urls --value=$allowed_urls
+
 
 
 _validate_redirect_uri
