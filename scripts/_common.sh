@@ -14,3 +14,10 @@ _validate_redirect_uri() {
         ynh_print_warn "Reverseproxying using cleartext HTTP to a possibly external machine ($target) is insecure ... please be super careful about this."
     fi
 }
+_display_config_panel() {
+
+   if [ "$redirect_type" = "redirect" ]; then
+     ynh_safe_rm "/etc/yunohost/apps/$app/config_panel.toml"
+     ynh_safe_rm "/etc/yunohost/apps/$app/scripts/config"
+   fi
+}
