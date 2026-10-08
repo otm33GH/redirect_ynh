@@ -41,6 +41,8 @@ visible = "redirect_type == 'reverseproxy'"
 [main.integration]
 name.en = "Embedding"
 name.fr = "Intégration"
+visible = "redirect_type == 'reverseproxy'"
+
 [main.integration.allowed_urls]
 ask.en = "Allow embedding from (URLs separated by spaces)"
 ask.fr = "Liste des adresses web autorisées à intégrer cette application séparées par un espace"
