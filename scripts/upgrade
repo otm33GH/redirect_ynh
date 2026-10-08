@@ -25,7 +25,16 @@ fi
 #=================================================
 ynh_script_progression "Configuring NGINX web server..."
 
+echo "PWD=$(pwd)"
+echo "PWD=$PWD"
+echo "redirect_type=$redirect_type"
+
 mv ../conf/{nginx-$redirect_type.conf,nginx.conf}
 ynh_config_add_nginx
+ynh_config_add_nginx
+echo "PWD=$(pwd)"
+echo "PWD=$PWD"
+
+ls -la ../conf/
 
 ynh_script_progression "Upgrade of $app completed"
