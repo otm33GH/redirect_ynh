@@ -28,10 +28,16 @@ ynh_script_progression "Configuring NGINX web server..."
 echo "PWD=$(pwd)"
 echo "PWD=$PWD"
 echo "redirect_type=$redirect_type"
+ls -la ../conf/
+ls -la /etc/yunohost/apps/$app/conf/
 
 mv ../conf/{nginx-$redirect_type.conf,nginx.conf}
+ls -la /etc/yunohost/apps/$app/conf/
+
+
 ynh_config_add_nginx
-ynh_config_add_nginx
+ls -la /etc/yunohost/apps/$app/conf/
+
 echo "PWD=$(pwd)"
 echo "PWD=$PWD"
 
