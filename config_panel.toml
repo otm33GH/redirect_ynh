@@ -11,8 +11,16 @@ name = "Mode"
 [main.mode.redirect_type]
 ask.en = "Redirect type :"
 ask.fr = "Type de redirection :"
-type = "string"
-readonly = true
+type = "select"
+choices.redirect = "Explicit redirection (HTTP 302). Redirect people to a different page."
+choices.redirect-no_path = "Explicit redirection (HTTP 302). Redirect people to a different page. Do not keep path"
+choices.reverseproxy = "Reverse-proxy (nginx proxy_pass). Expose an app, typically something that you manually installed (with or without Docker) locally or an another machine."
+
+[main.mode.target]
+ask.en = "target"
+ask.fr = "cible"
+type = "url"
+help = "This may be something like https://some.other.website (for explicit redirect) or http://127.0.0.1:1234 for reverse-proxies."
 
 [main.limit_size]
 name.en = "Upload size limit"
@@ -25,18 +33,6 @@ ask.en = "File upload size limit (Mb)"
 type = "number"
 bind = "null"
 
-[main.proxy]
-name.fr = "Redirection"
-name.en = "Redirect"
-visible = "redirect_type == 'reverseproxy'"
-
-[main.proxy.proxy_pass]
-ask.fr = "adresse proxy_pass"
-ask.en = "proxy_pass to"
-type = "url"
-bind = "null"
-optional = false
-visible = "redirect_type == 'reverseproxy'"
 
 [main.integration]
 name.en = "Embedding"
