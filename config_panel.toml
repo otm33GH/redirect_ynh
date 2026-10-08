@@ -36,7 +36,6 @@ bind = "null"
 
 [main.integration]
 name.en = "Embedding"
-name.fr = "Intégration"
 visible = "redirect_type == 'reverseproxy'"
 
 [main.integration.allowed_urls]
@@ -45,4 +44,15 @@ ask.fr = "Liste des adresses web autorisées à intégrer cette application sép
 type = "string"
 bind = "null"
 visible = "redirect_type == 'reverseproxy'"
+
+[main.auth_basic]
+name.en = "Reverse proxy to an app which reuses the auth basic header"
+name.fr = "Reverse proxy vers une application qui réutilise l’en-tête d’authentification Basic"
+
+[main.auth_basic.pabas]
+ask.en = "Disable protect_against_basic_auth_spoofing"
+ask.fr = "Désactiver protect_against_basic_auth_spoofing"
+help = "[Documentation](https://doc.yunohost.org/en/dev/packaging/advanced/sso_ldap_integration#specific-case)"
+type = "boolean"
+bind = "null"
 
