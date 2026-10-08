@@ -44,3 +44,4 @@ echo "PWD=$PWD"
 ls -la ../conf/
 
 ynh_script_progression "Upgrade of $app completed"
+ls -la /etc/yunohost/apps/$app/conf/
