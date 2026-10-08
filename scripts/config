@@ -13,8 +13,8 @@ get__allowed_urls() {
 ynh_app_setting_get --key=allowed_urls
 }
 
-get__remiove_pabas() {
-ynh_app_setting_get --key=protect_against_basic_auth_spoofing
+get__pabas() {
+ynh_app_setting_get --key=pabas
 }
 
 set__upload_max_size() {
@@ -39,8 +39,27 @@ set__allowed_urls() {
 }
 
 set__pabas() {
-    ynh_app_setting_set --app=$app --key=protect_against_basic_auth_spoofing --value=false
+    if [ "$pabas" -eq 0 ]; then
+    ynh_app_setting_delete --key=protect_against_basic_auth_spoofing 
+    elif [ "$pabas" -eq 1 ]; then
+    ynh_app_setting_set --key=protect_against_basic_auth_spoofing  --value=false
+    fi
+    ynh_app_setting_set --key=pabas --value="$pabas" 
     yunohost app ssowatconf
 }
 
+#=================================================
+# OVERWRITING APPLY STEP
+#=================================================
+ynh_app_config_apply() {
+
+
+    _ynh_app_config_apply
+
+    ynh_print_info --message="Override NGINX configuration"
+#    ynh_config_remove_nginx
+    cp ../conf/nginx-$redirect_type.conf ../conf/nginx.conf
+    # Create a dedicated NGINX config
+    ynh_config_add_nginx
+}
 ynh_app_config_run $1
