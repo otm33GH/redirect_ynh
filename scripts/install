@@ -18,7 +18,7 @@ _validate_redirect_uri
 #=================================================
 ynh_script_progression "Configuring NGINX web server..."
 
-mv ../conf/{"nginx-$redirect_type.conf",nginx.conf}
+cp ../conf/{"nginx-$redirect_type.conf",nginx.conf}
 ynh_config_add_nginx
 
 #=================================================
