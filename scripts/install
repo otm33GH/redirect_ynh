@@ -5,13 +5,11 @@ source /usr/share/yunohost/helpers
 
 upload_max_size="1"
 allowed_urls=""
-redirect_path='$request_uri'
-keep_path="1"
+pabas="0"
 
 ynh_app_setting_set --key=upload_max_size --value=$upload_max_size
 ynh_app_setting_set --key=allowed_urls --value=$allowed_urls
-ynh_app_setting_set --key=redirect_path --value="$redirect_path"
-ynh_app_setting_set --key=keep_path --value="$keep_path"
+ynh_app_setting_set --key=pabas --value="$pabas"
 
 _validate_redirect_uri
 
