@@ -10,8 +10,12 @@ _validate_redirect_uri
 #=================================================
 ynh_script_progression "Configuring NGINX web server..."
 
+echo "PWD=$PWD"
+echo "redirect_type=$redirect_type"
+ls -la ../conf/
 mv ../conf/{"nginx-$redirect_type.conf",nginx.conf}
 ynh_config_add_nginx
+ls -la ../conf/
 
 #=================================================
 # END OF SCRIPT
