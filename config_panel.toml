@@ -4,7 +4,15 @@ version = "1.0"
 name.en = "Configuration panel"
 name.fr = "Panneau de configuration"
 services = ["nginx"]
-visible = "redirect_type == 'reverseproxy'"
+
+[main.mode]
+name = "Mode"
+
+[main.mode.redirect_type]
+ask.en = "Redirect type :"
+ask.fr = "Type de redirection :"
+type = "string"
+readonly = true
 
 [main.limit_size]
 name.en = "Upload size limit"
